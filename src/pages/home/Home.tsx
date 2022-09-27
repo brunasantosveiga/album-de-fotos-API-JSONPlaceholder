@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import { api } from "../api";
-import { TypeAlbums } from "../types/TypeAlbums";
+import { api } from "../../api";
+import { TypeAlbums } from "../../types/TypeAlbums";
+import * as styled from "./HomeStyles";
 
 export const Home = () => {
   const [loading, setLoading] = useState(false);
@@ -24,14 +25,16 @@ export const Home = () => {
     <div>
       {loading && <div>Carregando...</div>}
       {!loading && albums.length > 0 && (
-        <p>
+        <div>
           {albums.map((album, id) => (
             <>
-              <p onClick={() => navigate(`/albums/${id + 1}`)}>{album.title}</p>
+              <styled.Titles onClick={() => navigate(`/albums/${id + 1}`)}>
+                {album.title}
+              </styled.Titles>
               <br />
             </>
           ))}
-        </p>
+        </div>
       )}
     </div>
   );

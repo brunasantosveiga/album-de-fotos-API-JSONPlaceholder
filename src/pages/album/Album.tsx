@@ -1,8 +1,9 @@
 import { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
-import { api } from "../api";
-import { TypeAlbums } from "../types/TypeAlbums";
-import { TypePhoto } from "../types/TypePhoto";
+import { api } from "../../api";
+import { TypeAlbums } from "../../types/TypeAlbums";
+import { TypePhoto } from "../../types/TypePhoto";
+import * as styled from "./AlbumStyles";
 
 export const Album = () => {
   const params = useParams(); //para eu ter aceso ao valor que coloquei na URL que nesse caso foi id
@@ -44,11 +45,11 @@ export const Album = () => {
 
   return (
     <div>
-      <button onClick={goBack}>Voltar</button>
-      <p>{album.title}</p>
+      <styled.Button onClick={goBack}>Voltar</styled.Button>
+      <styled.Titles>{album.title}</styled.Titles>
       {photosOfAlbum.map((photo: TypePhoto, index) => (
         <>
-          <img
+          <styled.Image
             onClick={() =>
               navigate(`/photos/${(album.id - 1) * 50 + (index + 1)}`)
             }

@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
-import { TypePhoto } from "../types/TypePhoto";
-import { api } from "../api";
+import { TypePhoto } from "../../types/TypePhoto";
+import { api } from "../../api";
+import * as styled from "./PhotoStyled";
 
 export const Photo = () => {
   const [photo, setPhoto] = useState<TypePhoto>({
@@ -30,9 +31,9 @@ export const Photo = () => {
 
   return (
     <div>
-      <button onClick={goBack}>Voltar</button>
-      <p>{photo.title}</p>
-      <img src={photo.thumbnailUrl} />
+      <styled.Button onClick={goBack}>Voltar</styled.Button>
+      <styled.Titles>{photo.title}</styled.Titles>
+      <styled.Image src={photo.thumbnailUrl} />
     </div>
   );
 };

@@ -1,20 +1,17 @@
-import { useState, useEffect } from "react";
-import { api } from "./api";
-import { Home } from "./pages/Home";
-import { TypeAlbums } from "./types/TypeAlbums";
 import { MainRoutes } from "./routes/MainRoutes";
+import * as styled from "./AppStyles";
 
 function App() {
   return (
-    <div>
+    <styled.Container>
       <header>
-        <h1>Galeria de fotos</h1>
+        <styled.Title>Galeria de fotos</styled.Title>
       </header>
       <hr />
       <div>
         <MainRoutes />
       </div>
-    </div>
+    </styled.Container>
   );
 }
 
