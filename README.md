@@ -1,16 +1,16 @@
 # Álbum de fotos utilizando a API [JSONPlaceholder](https://jsonplaceholder.typicode.com/)
 
-### Nesse projeto utilizei React com typescript, React Router, Axios e Styled components.
+### Nesse projeto utilizei React com typescript, React Router, Axios e Styled components. Trabalhei também a responsividade do projeto.
 
 ### Esse projeto foi um desafio proposto no curso de ReactJS da B7WEB e o executei sozinha.
 
 ## Tela 1 (Todos os álbuns):
-![image](https://user-images.githubusercontent.com/105018656/192795386-3d2d8dd3-632d-4f8f-8454-1492bba3155b.png)
+![image](https://user-images.githubusercontent.com/105018656/192894266-c418ca51-c157-43c3-97bb-aefc38086b76.png)
 
 ## Tela 2 (Ao clicar em um álbum):
-![image](https://user-images.githubusercontent.com/105018656/192795574-b08ee41d-702e-458d-bef5-bc22edb2ecde.png)
+![image](https://user-images.githubusercontent.com/105018656/192894325-e6f02fbf-3293-4dfd-a2aa-3939203db87c.png)
 
 ## Tela 3 (Ao clicar em uma foto):
-![image](https://user-images.githubusercontent.com/105018656/192795658-425f836d-9614-4b11-af6f-2815d81527df.png)
+![image](https://user-images.githubusercontent.com/105018656/192894369-af38e8a0-7e70-4060-b907-f298a6e12afb.png)
 
 
