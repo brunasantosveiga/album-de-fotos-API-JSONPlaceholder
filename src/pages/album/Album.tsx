@@ -45,16 +45,17 @@ export const Album = () => {
   return (
     <div>
       <Header title={album.title} />
-      {photosOfAlbum.map((photo: TypePhoto, index) => (
-        <>
+      <styled.Div>
+        {photosOfAlbum.map((photo: TypePhoto, index) => (
           <styled.Image
             onClick={() =>
               navigate(`/photos/${(album.id - 1) * 50 + (index + 1)}`)
             }
             src={photo.thumbnailUrl}
           />
-        </>
-      ))}
+        ))}
+      </styled.Div>
     </div>
   );
 };
+//colocar flex nas imagens

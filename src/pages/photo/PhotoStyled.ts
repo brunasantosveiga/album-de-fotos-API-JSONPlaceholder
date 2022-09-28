@@ -1,5 +1,13 @@
 import styled from "styled-components";
 
 export const Image = styled.img`
-  height: 400px;
+  width: 450px;
+
+  @media (max-width: 490px) {
+    width: 350px;
+  }
+
+  @media (max-width: 390px) {
+    width: 280px;
+  }
 `;

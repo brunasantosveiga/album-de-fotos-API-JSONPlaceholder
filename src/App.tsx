@@ -5,9 +5,11 @@ function App() {
   return (
     <styled.Container>
       <header>
-        <styled.Title>Galeria de fotos</styled.Title>
+        <styled.Title>
+          Galeria de fotos
+          <hr />
+        </styled.Title>
       </header>
-      <hr />
       <div>
         <MainRoutes />
       </div>
