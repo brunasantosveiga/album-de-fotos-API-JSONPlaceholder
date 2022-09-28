@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { api } from "../../api";
+import { Header } from "../../components/header/Header";
 import { TypeAlbums } from "../../types/TypeAlbums";
 import { TypePhoto } from "../../types/TypePhoto";
 import * as styled from "./AlbumStyles";
@@ -41,12 +42,9 @@ export const Album = () => {
     }
   };
 
-  const goBack = () => navigate(-1);
-
   return (
     <div>
-      <styled.Button onClick={goBack}>Voltar</styled.Button>
-      <styled.Titles>{album.title}</styled.Titles>
+      <Header title={album.title} />
       {photosOfAlbum.map((photo: TypePhoto, index) => (
         <>
           <styled.Image

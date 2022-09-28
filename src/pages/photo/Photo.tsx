@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
-import { useParams, useNavigate } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { TypePhoto } from "../../types/TypePhoto";
 import { api } from "../../api";
+import { Header } from "../../components/header/Header";
 import * as styled from "./PhotoStyled";
 
 export const Photo = () => {
@@ -12,7 +13,6 @@ export const Photo = () => {
     url: "",
     thumbnailUrl: "",
   });
-  const navigate = useNavigate();
   const params = useParams();
 
   useEffect(() => {
@@ -27,12 +27,9 @@ export const Photo = () => {
     }
   };
 
-  const goBack = () => navigate(-1);
-
   return (
     <div>
-      <styled.Button onClick={goBack}>Voltar</styled.Button>
-      <styled.Titles>{photo.title}</styled.Titles>
+      <Header title={photo.title} />
       <styled.Image src={photo.thumbnailUrl} />
     </div>
   );
